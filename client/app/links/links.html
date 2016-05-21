@@ -7,7 +7,7 @@
 
 <div id='container'>
 <!-- Your code here -->
-  <div class="link" ng-repeat="link in Links.getAll() track by link.visits">
+  <div class="link" ng-repeat="link in data.links | orderBy: 'visits'">
     <img src='../assets/redirect_icon.png'/>
     <div class='info'>
       <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>

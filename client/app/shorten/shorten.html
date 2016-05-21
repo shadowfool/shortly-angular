@@ -8,7 +8,7 @@
 <div id='container'>
   <form name="urlForm" method="post">
     <input type="url" name="input" ng-model="link.url" placeholder="Enter a url to shorten." required></input>
-    <button ng-click="addLink(link.url)">Add Link</button>
+    <button ng-click="addLink(link)">Add Link</button>
   </form>
   <div role="alert">
     <span class="error" ng-show="urlForm.input.$error.required">
