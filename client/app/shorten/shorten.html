@@ -6,7 +6,16 @@
 </div>
 
 <div id='container'>
-<!-- Your code here -->
+  <form name="urlForm" method="post">
+    <input type="url" name="input" ng-model="link.url" placeholder="Enter a url to shorten." required></input>
+    <button ng-click="addLink(link.url)">Add Link</button>
+  </form>
+  <div role="alert">
+    <span class="error" ng-show="urlForm.input.$error.required">
+      Required!</span>
+    <span class="error" ng-show="urlForm.input.$error.url">
+      Not valid url!</span>
+  </div>
 </div>
 
 
